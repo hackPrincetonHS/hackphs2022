@@ -1,0 +1,239 @@
+/* MAIN */
+
+:root {
+    --prim1: #ED6A5A;
+    --sec1: #c5594d;
+
+    --prim2: #5CA4A9;
+    --sec2: #9BC1BC;
+    --tert2: #518A8A;
+
+    --nav1: #3d3737;
+    --nav2: #4f4343;
+
+    --text: #E6EBE0;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Regular.ttf");
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    color: var(--text);
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding: 20px 20%;
+    box-sizing: border-box;
+}
+
+.container h1 {
+    font-size: 60pt;
+    letter-spacing: 3pt;
+    color: var(--text);
+}
+
+.container h2 {
+    font-size: 30pt;
+    color: var(--text);
+}
+
+.container p {
+    font-size: 15pt;
+    color: var(--text);
+    font-weight: 200;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+/* NAVBAR */
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--nav1);
+}
+  
+nav li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav img {
+    height: 50px;
+    padding: 5px 0px;
+}
+  
+nav > ul > li > a, nav #dropdown {
+    color: white;
+    text-align: center;
+    padding: 20px 14px;
+    text-decoration: none;
+    position: relative;
+    box-sizing: border-box;
+}
+  
+nav > ul > li > a:hover, nav #dropdown:hover {
+    background-color: var(--nav2);
+}
+
+nav #dropdown #dropdown-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: var(--nav1);
+    top: 101%;
+    left: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 20px 20px var(--prim1);
+}
+
+nav #dropdown-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+nav #dropdown-content a:hover {
+    background-color: var(--nav2);
+}
+
+nav #dropdown:hover #dropdown-content {
+    display: block;
+}
+
+/* SPLASH */
+#splash {
+    background-color: var(--prim1);
+}
+
+#splash-box {
+    width: 100%;
+    background-color: var(--sec1);
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 40px 0px;
+}
+
+#splash-box h1 {
+    font-size: 60pt;
+    letter-spacing: 5pt;
+    color: var(--text);
+}
+
+#splash-box h2 {
+    font-size: 30pt;
+    color: var(--text);
+    font-weight: 200;
+    letter-spacing: 2pt;
+}
+
+#splash-box h3 {
+    font-size: 20pt;
+    color: var(--text);
+    font-weight: 200;
+    letter-spacing: 1pt;
+}
+
+#splash-box button {
+    border: 2px solid var(--text);
+    background-color: var(--sec1);
+    color: var(--text);
+    padding: 10px;
+    font-size: 20pt;
+    cursor: pointer;
+    font-family: "Source Sans Pro", sans-serif;
+    letter-spacing: 2pt;
+}
+
+#splash-box button:hover {
+    background-color: var(--prim1);
+}
+
+/* ABOUT */
+#about {
+    background-color: var(--prim2);
+}
+
+/* FAQ */
+#faq {
+    background-color: var(--tert2);
+}
+
+#faq details {
+    border: 2px solid var(--text);
+    margin-bottom: 20px;
+}
+
+#faq summary {
+    font-size: 20pt;
+    color: var(--text);
+    font-weight: 200;
+    cursor: pointer;
+    background-color: var(--prim2);
+    padding: 10px;
+}
+
+#faq details p {
+    padding: 10px;
+}
+
+/* SCHEDULE */
+#schedule {
+    background-color: var(--prim2);
+}
+
+#schedule table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#schedule td, #schedule th {
+    border: 2px solid var(--text);
+    padding: 10px;
+    font-size: 15pt;
+    color: var(--text);
+    font-weight: 200;
+    text-align: center;
+}
+
+#schedule th {
+    background-color: var(--tert2);
+}
+
+/* SPONSORS */
+#sponsors {
+    background-color: var(--tert2);
+}
+
+/* TEAM */
+#team {
+    background-color: var(--prim2);
+}
+
+/* FOOTER */
+#footer {
+    background-color: var(--prim1);
+}
+
+#footer #copyright {
+    color: var(--sec1);
+}
