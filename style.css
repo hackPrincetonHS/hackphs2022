@@ -120,6 +120,37 @@ nav #dropdown:hover #dropdown-content {
 }
 
 /* SPLASH */
+#calltoaction {
+    background-color: var(--prim1);
+}
+
+#calltoaction h1 {
+    font-size: 60pt;
+    letter-spacing: 0pt;
+    color: var(--text);
+}
+
+#calltoaction button {
+    border: 2px solid var(--text);
+    background-color: var(--sec1);
+    color: var(--text);
+    padding: 10px;
+    font-size: 20pt;
+    cursor: pointer;
+    font-family: "Source Sans Pro", sans-serif;
+    letter-spacing: 2pt;
+}
+
+#calltoaction button:hover {
+    background-color: var(--prim1);
+}
+
+/* ABOUT */
+#about {
+    background-color: var(--prim2);
+}
+
+/* CALL TO ACTION */
 #splash {
     background-color: var(--prim1);
 }
@@ -162,15 +193,6 @@ nav #dropdown:hover #dropdown-content {
     cursor: pointer;
     font-family: "Source Sans Pro", sans-serif;
     letter-spacing: 2pt;
-}
-
-#splash-box button:hover {
-    background-color: var(--prim1);
-}
-
-/* ABOUT */
-#about {
-    background-color: var(--prim2);
 }
 
 /* FAQ */
@@ -227,6 +249,18 @@ nav #dropdown:hover #dropdown-content {
 /* TEAM */
 #team {
     background-color: var(--prim2);
+}
+
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.img-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
 
 /* FOOTER */
