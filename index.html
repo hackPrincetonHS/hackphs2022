@@ -33,8 +33,41 @@
         <div id="splash" class="container">
             <div id="splash-box">
                 <h1>HACKPHS 2022</h1>
-                <h2>NOV. 8-9</h2>
-                <h3>293 DAYS : 13 HOURS : 23 MIN : 12 SEC</h3>
+                <h2>NOV. 5-6</h2>
+                <h3 id="countdown">293 DAYS : 13 HOURS : 23 MIN : 12 SEC</h3>
+                <script>
+                    let end = new Date('11/5/2022 12:00 AM');
+
+                    // how many ms each unit is
+                    var second = 1000;
+                    var minute = second * 60;
+                    var hour = minute * 60;
+                    var day = hour * 24;
+
+                    var timer;
+
+                    function showRemaining() {
+                        var now = new Date();
+                        var distance = end - now;
+                        if (distance < 0) {
+                            clearInterval(timer);
+                            document.getElementById('countdown').innerHTML = 'HackPHS 2022 is over!';
+                            return;
+                        }
+
+                        var days = Math.floor(distance / day);
+                        var hours = Math.floor((distance % day) / hour);
+                        var minutes = Math.floor((distance % hour) / minute);
+                        var seconds = Math.floor((distance % minute) / second);
+
+                        document.getElementById('countdown').innerHTML = `
+                            ${days} DAYS : ${hours} HOURS : ${minutes} MIN : ${seconds} SEC
+                        `;
+                    }
+
+                    setInterval(showRemaining, 1000);
+                    showRemaining();
+                </script>
                 <button>REGISTER</button>
                 <br><br><br>            
             </div>
