@@ -1,213 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="style.css">
-        <title>hackPHS 2022</title>
+    <head>
+        <link rel="stylesheet" href="static/style.css">
+        <script src="scroll.js"></script>
     </head>
     <body>
-        <!-- NAVBAR -->
-        <nav>
-            <ul>
-                <li><img src="logo.svg"></li>
-                <li><a>HACKPHS</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#schedule">Schedule</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#team">Team</a></li>
-                <li id="dropdown">
-                    Past years
-                    <div id="dropdown-content">
-                        <a href="#">2021</a><br>
-                        <a href="#">2020</a><br>
-                        <a href="#">2019</a><br>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- SPLASH SCREEN -->
-        <div id="splash" class="container">
+        <div id="splash">
             <div id="splash-box">
-                <h1>HACKPHS 2022</h1>
-                <h2>NOV. 5-6</h2>
-                <h3 id="countdown">293 DAYS : 13 HOURS : 23 MIN : 12 SEC</h3>
+                <div style="text-align:center;padding-bottom:50px;">
+                    <img src="img/splash_logo.png" alt="HackPHS 2022" style="width:80%;">
+                    <h1>NOV. 5-6</h1>
+                    <button>REGISTER!</button>
+                </div>
+                <div id="countdown" style="position:relative;min-height:400px">
+                    <div id=countdown-rock>
+                        <img src="img/timer_rock.png" style="width:100%">
+                        <svg id="countdown-timer" viewBox="0 0 105 100" style="width:100%"></svg>
+                    </div>
+                </div>
                 <script>
                     let end = new Date('11/5/2022 12:00 AM');
+                    let hackathon_end = new Date('11/6/2022 6:00 PM');
 
                     // how many ms each unit is
-                    var second = 1000;
-                    var minute = second * 60;
-                    var hour = minute * 60;
-                    var day = hour * 24;
+                    let second = 1000;
+                    let minute = second * 60;
+                    let hour = minute * 60;
+                    let day = hour * 24;
 
-                    var timer;
+                    let timer;
 
                     function showRemaining() {
-                        var now = new Date();
-                        var distance = end - now;
+                        let now = new Date();
+                        let distance = end - now;
+
                         if (distance < 0) {
-                            clearInterval(timer);
-                            document.getElementById('countdown').innerHTML = 'HackPHS 2022 is over!';
+                            if (now > hackathon_end) {
+                                document.getElementById('countdown-timer').innerHTML = "hackPHS 2022 is over!";
+                            }
+                            else {
+                                document.getElementById('countdown-timer').innerHTML = "hackPHS 2022 has started!";
+                            }
                             return;
                         }
 
-                        var days = Math.floor(distance / day);
-                        var hours = Math.floor((distance % day) / hour);
-                        var minutes = Math.floor((distance % hour) / minute);
-                        var seconds = Math.floor((distance % minute) / second);
+                        let days = Math.floor(distance / day).toString().padStart(3, '0');
+                        let hours = Math.floor((distance % day) / hour).toString().padStart(2, '0');
+                        let minutes = Math.floor((distance % hour) / minute).toString().padStart(2, '0');
+                        let seconds = Math.floor((distance % minute) / second).toString().padStart(2, '0');
 
-                        document.getElementById('countdown').innerHTML = `
-                            ${days} DAYS : ${hours} HOURS : ${minutes} MIN : ${seconds} SEC
+                        document.getElementById('countdown-timer').innerHTML = `
+                            <text x="25" y="70">${days} :</text>
+                            <text x="50" y="70">${hours} :</text>
+                            <text x="70" y="70">${minutes} :</text>
+                            <text x="90" y="70">${seconds}</text>
+
+                            <text x="28" y="80" style="font-size:5pt">DAYS</text>
+                            <text x="48" y="80" style="font-size:5pt">HOURS</text>
+                            <text x="73" y="80" style="font-size:5pt">MIN</text>
+                            <text x="92" y="80" style="font-size:5pt">SEC</text>
                         `;
                     }
 
                     setInterval(showRemaining, 1000);
                     showRemaining();
                 </script>
-                <button>REGISTER</button>
-                <br><br><br>            
             </div>
         </div>
-
-        <!-- ABOUT -->
-        <div id="about" class="container">
-            <h1>about</h1>
-            <h2>What is hackPHS?</h2>
-            <p>
-                hackPHS hosts over 300 high school students from across New Jersey to collaborate, innovate, and create in a 24-hour, student organized hackathon based at Princeton High School. Whether you're a complete beginner or an experienced hacker, hackPHS will have something for you!
-            </p>
-            <h2>When and Where is hackPHS?</h2>
-            <p>
-                <b>CHANGE THIS!!!!!</b>
-                hackPHS will be a hybrid event this year, running from November 6th, 9 a.m. to November 7th, 1 p.m. Princeton High School students will be welcome to attend the in-person event in the cafeteria of Princeton High School, located at 151 Moore St, Princeton, NJ (but are not required to), and the rest of the participants will be attending remotely via a discord server. The in-person portion of the event will occur from 9 a.m. to 12 a.m. on the 6th and 10 a.m. to 1 p.m. on the 7th. Students coming in person will be required to return home at 12 am and will be welcomed back at 10 am the next day. In person safety precauntions will include mask wearing, table dividers, eating outdoors, social distancing, and hand sanitizer stations.
-            </p>    
-            <h2>Who pays for all of this?</h2>
-            <p>
-                hackPHS is completely free to everyone, thanks to our amazing sponsors!
-            </p>
-            <h2>What is a hackathon?</h2>
-            <p>
-                Hackathons are where creative and enthusiastic people come together to build awesome projects in a single all-nighter. With awesome workshops and incredible prizes, hackers will learn about new tech, build innovative solutions to real-world problems, and share their creation with the community, all in one event. If you are looking for a competition, a place to meet fellow hackers, or even just a place to learn how to code, hackathons are for you. If you want to learn more, see the MLH Hackathon FAQ.
-            </p>    
-        </div>
-
-        <!-- WHAT ARE YOU WAITING FOR ?! -->
-        <div id="calltoaction" class="container">
-            <h1>what are you waiting for?</h1>
-            <button>REGISTER NOW!</button>
-            <br><br><br>
-        </div>
-
-        <!-- FAQ -->
-        <div id="faq" class="container">
-            <h1>faq</h1>
-            <details>
-                <summary>How will we get our swag?</summary>
-                <p>As long as you attend at least one workshop or submit your project to devpost, you will receive swag. This includes t-shirts, stickers, etc. In person participants will receive their swag at the event, and online participants will have their swag mailed no matter where in the world they live!</p>
-            </details>
-            <details>
-                <summary>Who can attend this event?</summary>
-                <p>This event is for high school students only. If you are no longer a high schooler and would like to help out, consider applying to be a mentor!</p>
-            </details>
-            <details>
-                <summary>How do I apply?</summary>
-                <p>Apply by going to our clipboard. Swag will be distributed on a first-come first-serve basis, so apply ASAP!</p>
-            </details>
-        </div>
-
-        <!-- SCHEDULE -->
-        <div id="schedule" class="container">
-            <h1>schedule</h1>
-            <h2>Saturday</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Event</th>
-                        <th>Location</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>9:30 a.m.</td>
-                        <td>Server opens for online hackers, Check-in opens for in-person hackers</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h2>Sunday</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Time</th>
-                        <th>Event</th>
-                        <th>Location</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>9:30 a.m.</td>
-                        <td>Server opens for online hackers, Check-in opens for in-person hackers</td>
-                        <td>-</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br><br><br>
-        </div>
-
-        <!-- SPONSORS -->
-
-        <div id="sponsors" class="container">
-            <h1>sponsors</h1>
-        </div>
-
-        <!-- TEAM -->
-        <div id="team" class="container">
-            <h1>team</h1>
-            <h2>Design and Tech</h2>
-            <!-- TODO: REPLACE WITH JS-GENERATED IMAGES AND MODALS -->
-            <div class="img-grid">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
+        <div class="section-wrapper">
+            <div class="trans">
+                <img src="img/trans_waves2.png" width="100%">
             </div>
-            <h2>Outreach</h2>
-            <div class="img-grid">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
+            <div id="about-transition" class="trans">
+                <img id="waves" src="img/trans_waves.png" width="110%">
             </div>
-            <h2>Logistics</h2>
-            <div class="img-grid">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-            </div>
-            <h2>Finance</h2>
-            <div class="img-grid">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
-                <img src="img/connor.jpg">
+
+            <div id="about" class="section">
+                <h1>&lt; about &gt;</h1>
+                <h2>What is hackPHS?</h2>
+                <p>
+                    hackPHS hosts over 300 high school students from across New Jersey to collaborate, innovate, and create in a 24-hour, student organized hackathon based at Princeton High School. Whether you're a complete beginner or an experienced hacker, hackPHS will have something for you!
+                </p>
+                <h2>When and Where is hackPHS?</h2>
+                <p>
+                    <b>CHANGE THIS!!!!!</b>
+                    hackPHS will be a hybrid event this year, running from November 6th, 9 a.m. to November 7th, 1 p.m. Princeton High School students will be welcome to attend the in-person event in the cafeteria of Princeton High School, located at 151 Moore St, Princeton, NJ (but are not required to), and the rest of the participants will be attending remotely via a discord server. The in-person portion of the event will occur from 9 a.m. to 12 a.m. on the 6th and 10 a.m. to 1 p.m. on the 7th. Students coming in person will be required to return home at 12 am and will be welcomed back at 10 am the next day. In person safety precauntions will include mask wearing, table dividers, eating outdoors, social distancing, and hand sanitizer stations.
+                </p>    
+                <h2>Who pays for all of this?</h2>
+                <p>
+                    hackPHS is completely free to everyone, thanks to our amazing sponsors!
+                </p>
+                <h2>What is a hackathon?</h2>
+                <p>
+                    Hackathons are where creative and enthusiastic people come together to build awesome projects in a single all-nighter. With awesome workshops and incredible prizes, hackers will learn about new tech, build innovative solutions to real-world problems, and share their creation with the community, all in one event. If you are looking for a competition, a place to meet fellow hackers, or even just a place to learn how to code, hackathons are for you. If you want to learn more, see the MLH Hackathon FAQ.
+                </p>    
+                <p><em>we should also have some photos of previous hackathons here</em></p>
             </div>
         </div>
-
-        <!-- FOOTER -->
-        <div id="footer" class="container">
-            <h3>HACKPHS 2022</h3>
-            <p>
-                <a>[Contact us]</a><br>
-                <a>[Privacy]</a><br>
-                <a>[Code of Conduct]</a><br>    
-            </p>
-            <p id="copyright">&copy; 2022 hackPHS. All Rights Reserved.</p>
+        <div class="section-wrapper">
+            <div id="faq-transition" class="trans">
+                <img src="img/trans_twilight.png" width="100%">
+            </div>
+            <div class="trans">
+                <img id="scroll-fish" src="img/scroll_fish.png" width="40%">
+            </div>
+            <div id="faq" class="section">
+                <h1>&lt; faq &gt;</h1>
+                <p>I WILL IMPLEMENT THE COOL EXPANDING THING LATER Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus elit, pulvinar at mauris a, scelerisque scelerisque quam. Donec aliquam nunc ac lorem mollis suscipit. Mauris aliquet convallis egestas. Donec varius, nulla at pellentesque consequat, tortor enim pellentesque turpis, in volutpat dui nulla quis erat. Vivamus vitae lectus vel sapien sagittis sodales vel in augue. Etiam vitae nunc commodo leo gravida sollicitudin. Praesent vehicula euismod sem ac dapibus. Vivamus lorem felis, feugiat vitae massa vitae, viverra condimentum libero.</p>
+            </div>            
+        </div>
+        <div class="section-wrapper">
+            <div id="schedule-transition" class="trans">
+                <img src="img/trans_midnight.png" width="100%">
+            </div>
+            <div class="trans">
+                <img id="scroll-jellyfish" src="img/scroll_jellyfish.png" width="40%">
+            </div>
+            <div id="schedule" class="section">
+                <h1>&lt; schedule &gt;</h1>
+                <h2>Saturday</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Event</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:30 a.m.</td>
+                            <td>Server opens for online hackers, Check-in opens for in-person hackers</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Sunday</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Event</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                        <tr>
+                            <td>10 a.m.</td>
+                            <td>FREE PIZZA</td>
+                            <td>242</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="section-wrapper">
+            <div id="sponsors-transition" class="trans">
+                <img src="img/trans_coral.png" width="100%">
+            </div>        
+            <div id="sponsors" class="section">
+                <h1>&lt; sponsors &gt;</h1>
+                <div class="img-grid">
+                    <img src="team_img/fake_company.png">
+                    <img src="team_img/fake_company_2.svg">
+                    <img src="team_img/fake_company_3.png">
+                </div>
+            </div>            
+        </div>
+        <div class="section-wrapper">
+            <div id="team-transition" class="trans">
+                <img src="img/trans_crust.png" width="100%">
+            </div>            
+            <div id="team" class="section">
+                <h1>&lt; team &gt;</h1>
+                <h2>Design and Tech</h2>
+                <div class="img-grid">
+                    <img src="team_img/connor.jpg">
+                    <img src="team_img/connor.jpg">
+                    <img src="team_img/connor.jpg">
+                    <img src="team_img/connor.jpg">
+                </div>
+            </div>
         </div>
     </body>
 </html>

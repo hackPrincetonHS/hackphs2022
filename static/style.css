@@ -1,0 +1,162 @@
+/* GENERAL */
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro-Regular.ttf");
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: "Source Sans Pro";
+    color: var(--text);
+    width: 100%;
+    image-rendering: smooth;
+    overflow-x: hidden;
+}
+
+/* SPLASH */
+#splash-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    position: relative;
+}
+
+button {
+    border: 2px solid black;
+    background-color: rgba(41, 144, 255, 0.527);
+    padding: 10px;
+    font-size: 20pt;
+    cursor: pointer;
+    font-family: "Source Sans Pro", sans-serif;
+    letter-spacing: 2pt;
+}
+
+/* SECTIONS */
+.section {
+    padding: 20px 20%;
+    position: relative;
+    padding-bottom: 200px;
+    font-size: 15pt;
+}
+
+.section-wrapper {
+    position: relative;
+}
+
+h1 {
+    font-size: 60pt;
+    letter-spacing: 2pt;
+    z-index: 1000;
+    position: relative;
+}
+
+h2 {
+    font-size: 30pt;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 15pt;
+    font-weight: 200;
+    text-align: center;
+}
+
+#splash {
+    background-image: url("../img/bg_sky.png");
+    padding: 20px 0px;
+}
+
+#about {
+    background-image: url("../img/bg_about.png");
+    color: white;
+}
+
+#faq {
+    background-image: url("../img/bg_faq.png");
+    color: white;
+}
+
+#schedule {
+    background-image: url("../img/bg_schedule.png");
+    color: white;
+}
+
+#sponsors {
+    background-image: url("../img/bg_sponsors.png");
+}
+
+#team {
+    background-image: url("../img/bg_team.png");
+    color: white;
+}
+
+/* COUNTDOWN */
+#countdown-rock {
+    width:100%;
+    position:absolute;
+    bottom:-50px;
+    right:0px;
+    z-index:199;
+}
+
+#countdown-timer {
+    position: absolute;
+    bottom:0;
+    right:0;
+    transform:skew(-10deg);
+    font-size: 9pt;
+    fill: rgb(85, 71, 33);
+}
+
+/* FOREGROUND */
+.trans {
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    transform: translate(0%, -50%);
+}
+
+@keyframes waves {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+#about-transition {
+    z-index: 200;
+}
+
+#waves {
+    animation: waves 4s infinite;
+}
+
+/* TEAM */
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.img-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* NAV */
