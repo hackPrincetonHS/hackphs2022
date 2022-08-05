@@ -3,21 +3,24 @@
     <head>
         <!-- Stylesheets -->
         <link rel="stylesheet" href="static/style.css">
-        <link rel="icon" href="assets/logo.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
 
         <!-- Scripts -->
         <script src="scroll.js"></script>
         <script src="dialog.js"></script>
+        <script src="nav.js"></script>
 
         <!-- Boilerplate -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
+        <link rel="icon" href="assets/logo.svg">
+
         <title>hackPHS 2022</title>
     </head>
     <body>
-        <!-- NAVBAR -->
-        <nav>
+        <!-- NAVBARS -->
+        <nav id="desktop_nav">
             <ul>
                 <li><img src="assets/logo.svg"></li>
                 <li><a>HACKPHS</a></li>
@@ -27,7 +30,33 @@
                 <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#team">Team</a></li>
                 <li id="dropdown">
-                    Past years
+                    Past years <i class="fa fa-caret-down"></i>
+                    <div id="dropdown-content">
+                        <a href="https://hackphs.tech">2021</a>
+                        <a href="http://2020.hackphs.tech">2020</a>
+                        <a href="https://2019.hackphs.tech">2019</a>
+                        <a href="https://2018.hackphs.tech">2018</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <nav id="mobile_nav">
+            <ul>
+                <li><img src="assets/logo.svg"></li>
+                <li><a>HACKPHS</a></li>
+                <li onclick="dropdown()" style="float:right">
+                    <a class="fa fa-bars"> </a>
+                </li>                
+            </ul>
+            <ul id="mobile_menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#team">Team</a></li>
+                <li id="dropdown">
+                    Past years <i class="fa fa-caret-down"></i>
                     <div id="dropdown-content">
                         <a href="https://hackphs.tech">2021</a>
                         <a href="http://2020.hackphs.tech">2020</a>
@@ -42,10 +71,9 @@
         <div id="splash">
             <div id="splash-box">
                 <div style="text-align:center;padding-bottom:50px;">
-                    <!--<img src="img/splash_logo.png" alt="HackPHS 2022" style="width:80%;">-->
-                    <h1>hackPHS 2022</h1>
-                    <h2>November 5th-6th</h1>
-                    <button>REGISTER!</button>
+                    <img src="img/tmp_logo.png" alt="HackPHS 2022" style="width:80%;filter:drop-shadow(0px 0px 30px white)">
+                    <h2 style="color: rgb(234, 0, 109)">NOVEMBER 5th-6th</h1>
+                    <button>REGISTER <i class="fa fa-arrow-right"></i></button>
                 </div>
                 <div id="countdown" style="position:relative;min-height:400px">
                     <div id=countdown-rock>
@@ -79,19 +107,23 @@
                             return;
                         }
 
-                        let days = Math.floor(distance / day).toString().padStart(3, '0');
+                        let days = Math.floor(distance / day).toString().padStart(2, '0');
                         let hours = Math.floor((distance % day) / hour).toString().padStart(2, '0');
                         let minutes = Math.floor((distance % hour) / minute).toString().padStart(2, '0');
                         let seconds = Math.floor((distance % minute) / second).toString().padStart(2, '0');
 
                         document.getElementById('countdown-timer').innerHTML = `
-                            <text x="25" y="70">${days} :</text>
-                            <text x="50" y="70">${hours} :</text>
-                            <text x="70" y="70">${minutes} :</text>
+                            <text x="30" y="70">${days}</text>
+                            <text x="49" y="70">${hours}</text>
+                            <text x="70" y="70">${minutes}</text>
                             <text x="90" y="70">${seconds}</text>
 
+                            <text x="45" y="70">:</text>
+                            <text x="65" y="70">:</text>
+                            <text x="86" y="70">:</text>
+
                             <text x="28" y="80" style="font-size:5pt">DAYS</text>
-                            <text x="48" y="80" style="font-size:5pt">HOURS</text>
+                            <text x="53" y="80" style="font-size:5pt">HR</text>
                             <text x="73" y="80" style="font-size:5pt">MIN</text>
                             <text x="92" y="80" style="font-size:5pt">SEC</text>
                         `;

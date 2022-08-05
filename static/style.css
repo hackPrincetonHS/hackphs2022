@@ -7,12 +7,14 @@
 html, body {
     padding: 0;
     margin: 0;
-    font-family: "Source Sans Pro";
-    color: var(--text);
-    width: 100%;
+    font-family: "Rubik";
     image-rendering: smooth;
-    overflow-x: hidden;
     scroll-behavior: smooth;
+    position: relative;
+}
+
+html {
+    overflow-x: hidden;
 }
 
 /* SPLASH */
@@ -32,19 +34,20 @@ html, body {
 }
 
 button {
-    border: 2px solid rgb(8, 66, 113);
-    border-radius: 5px;
-    background-color: rgba(41, 144, 255, 0.66);
-    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(234, 0, 109);
+    padding: 20px;
     font-size: 20pt;
     cursor: pointer;
     font-family: "Source Sans Pro", sans-serif;
     letter-spacing: 2pt;
     transition: all 0.2s;
+    color: white;
 }
 
 button:hover {
-    background-color: rgba(41, 144, 255, 1);
+    background-color: rgb(162, 26, 142);
 }
 
 /* SECTIONS */
@@ -84,8 +87,19 @@ h2 {
 }
 
 table {
+    border-style: hidden;
     border-collapse: collapse;
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 0 2px white;
+}
+
+thead {
+    background-color: rgba(12, 71, 143, 0.53);
+}
+
+th {
+    border-radius: 10px;
 }
 
 td, th {
@@ -227,6 +241,7 @@ td, th {
     padding: 15px;
     background-color: transparent;
     transition: border-color 0.1s;
+    border-radius: 0px;
 }
 
 #team-carousel-container button:hover {
@@ -270,6 +285,12 @@ dialog img {
 
 /* NAVBAR */
 
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 100000;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -281,6 +302,7 @@ nav ul {
 nav li {
     display: inline-block;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 nav img {
@@ -331,4 +353,40 @@ nav #dropdown-content a:hover {
 
 nav #dropdown:hover #dropdown-content {
     display: block;
+}
+
+#mobile_nav {
+    display: none;
+}
+
+.visible {
+    display: block !important;
+}
+
+#mobile_menu {
+    background-color: rgba(17, 82, 136, 0.831);
+    display: none;
+    transition: 0.2s opacity;
+}
+
+#mobile_menu li {
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#mobile_menu li > a {
+    display: block;
+    padding: 10px;
+    transition: 0.2s all;
+}
+
+@media screen and (max-width: 850px) {
+    nav {
+        display: none;
+    }   
+    #mobile_nav {
+        display: block;
+    } 
 }
