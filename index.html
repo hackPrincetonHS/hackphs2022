@@ -45,8 +45,8 @@
             <ul>
                 <li><img src="assets/logo.svg"></li>
                 <li><a>HACKPHS</a></li>
-                <li onclick="dropdown()" style="float:right">
-                    <a class="fa fa-bars"> </a>
+                <li style="float:right">
+                    <a id="menu-button" onclick="dropdown()" class="fa fa-bars"> </a>
                 </li>                
             </ul>
             <ul id="mobile_menu">
@@ -165,6 +165,7 @@
                     Hackathons are where creative and enthusiastic people come together to build awesome projects in a single all-nighter. With awesome workshops and incredible prizes, hackers will learn about new tech, build innovative solutions to real-world problems, and share their creation with the community, all in one event. If you are looking for a competition, a place to meet fellow hackers, or even just a place to learn how to code, hackathons are for you. If you want to learn more, see the MLH Hackathon FAQ.
                 </p>    
                 <p><em>we should also have some photos of previous hackathons here</em></p>
+                <br><br><br><br>
             </div>
         </div>
         <div class="section-wrapper">
@@ -176,7 +177,36 @@
             </div>
             <div id="faq" class="section">
                 <h1>&lt; faq &gt;</h1>
-                <p>I WILL IMPLEMENT THE COOL EXPANDING THING LATER Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec metus elit, pulvinar at mauris a, scelerisque scelerisque quam. Donec aliquam nunc ac lorem mollis suscipit. Mauris aliquet convallis egestas. Donec varius, nulla at pellentesque consequat, tortor enim pellentesque turpis, in volutpat dui nulla quis erat. Vivamus vitae lectus vel sapien sagittis sodales vel in augue. Etiam vitae nunc commodo leo gravida sollicitudin. Praesent vehicula euismod sem ac dapibus. Vivamus lorem felis, feugiat vitae massa vitae, viverra condimentum libero.</p>
+                <div class="accordion">
+                    <button class="accordion-button">Who can attend?</button>
+                    <div>
+                        <p>Anyone who is a high schooler can compete in hackPHS 2022. If you're not a high schooler and would like to help out, consider applying to be a mentor!</p>
+                    </div>
+                    <button class="accordion-button">How do I apply?</button>
+                    <div>
+                        <p>Apply by going to our clipboard. Swag will be distributed on a first-come first-serve basis, so apply ASAP!</p>
+                    </div>
+                    <button class="accordion-button">How do I form a team?</button>
+                    <div>
+                        <p>Teams of up to 4 people are encouraged (though not mandatory). If you don't have a team before the event, don't worry! At the beginning of the event, there will be a team building workshop, which will be a great way to meet other enthusiastic people and even make new friends.</p>
+                    </div>
+                </div>
+                <script>
+                    let toggles = document.getElementsByClassName("accordion-button");
+                    for (let toggle of toggles) {
+                        toggle.addEventListener("click", function(e) {
+                            this.classList.toggle("active");
+                            let panel = this.nextElementSibling;
+                            if (panel.style.maxHeight) {
+                                panel.style.maxHeight = null;
+                            }
+                            else {
+                                panel.style.maxHeight = panel.scrollHeight + "px";
+                            } 
+                        });
+                    }
+                </script>
+                <br><br><br><br>
             </div>            
         </div>
 
@@ -269,6 +299,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <br><br><br><br>
             </div>
         </div>
 
@@ -297,11 +328,11 @@
                 <h2 id="team-section-name"></h2>
                 <div id="team-carousel-container">
                     <div class=button-container>
-                        <button onclick="prev()" class="left"></button>
+                        <button onclick="prev()" class="fa-solid fa-angle-left"></button>
                     </div>
                     <div id="team-container"></div>
                     <div class=button-container>
-                        <button onclick="next()" class="right"></button>
+                        <button onclick="next()" class="fa-solid fa-angle-right"></button>
                     </div>
                 </div>
                 <br clear="both"><br>

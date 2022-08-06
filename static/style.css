@@ -40,7 +40,7 @@ button {
     padding: 20px;
     font-size: 20pt;
     cursor: pointer;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: Rubik, sans-serif;
     letter-spacing: 2pt;
     transition: all 0.2s;
     color: white;
@@ -185,6 +185,52 @@ td, th {
     animation: waves 4s infinite;
 }
 
+/* ACCORDION */
+.accordion {
+    border: 2px solid rgb(255, 255, 255);
+    overflow:hidden;
+    border-radius: 10px;
+}
+
+.accordion button {
+    display: block;
+    border-radius: 0px;
+    width: 100%;
+    letter-spacing: normal;
+    text-align: left;
+    padding: 10px;
+}
+
+.accordion button:not(:first-child) {
+    border-top: 2px solid white;
+}
+
+.accordion .active {
+    border-bottom: 2px solid white;
+}
+
+.accordion button:after {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900;
+    content: "\f107";
+    font-size: 18px;
+    float: right;
+    margin-left: 5px;
+}
+  
+.accordion .active:after {
+    content: '\f106';
+}
+
+.accordion div {
+    padding: 0px 10px;
+    font-size: 15pt;
+    background-color: rgba(3, 53, 106, 0.482);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
 /* TEAM */
 .img-grid {
     display: grid;
@@ -235,17 +281,16 @@ td, th {
 
 #team-carousel-container button {
     margin: auto;
-    border: solid white;
-    border-width: 0 8px 8px 0;
     display: inline-block;
-    padding: 15px;
     background-color: transparent;
-    transition: border-color 0.1s;
+    transition: color 0.1s;
     border-radius: 0px;
+    font-size: 50pt;
+    color: white;
 }
 
 #team-carousel-container button:hover {
-    border-color: rgb(216, 216, 216);
+    color: rgb(224, 224, 224);
 }
 
 #team-carousel-container .right {
@@ -332,6 +377,7 @@ nav #dropdown #dropdown-content {
     left: 0px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    overflow: hidden;
     z-index: 999999;
     padding: 0px;
 }
@@ -380,6 +426,10 @@ nav #dropdown:hover #dropdown-content {
     display: block;
     padding: 10px;
     transition: 0.2s all;
+}
+
+#menu-button:hover{
+    background-color: transparent;
 }
 
 @media screen and (max-width: 850px) {
