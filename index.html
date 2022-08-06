@@ -15,6 +15,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="icon" href="assets/logo.svg">
+        <meta charset="UTF-8">
+
+        <!-- SEO -->
+        <meta name="description" content="A 24-hour hackathon hosted in Princeton, New Jersey">
+        <meta name="keywords" content="Hackathon, Princeton, hackPHS, hackPHS 2022">
+        <meta property="og:image" content="img/banner.png">
+        <meta property="twitter:image" content="img/banner.png">
+        <meta property="twitter:card" content="summary_large_image">
 
         <title>hackPHS 2022</title>
     </head>
@@ -100,11 +108,9 @@
                         if (distance < 0) {
                             if (now > hackathon_end) {
                                 document.getElementById('countdown-timer').innerHTML = "hackPHS 2022 is over!";
+                                return;
                             }
-                            else {
-                                document.getElementById('countdown-timer').innerHTML = "hackPHS 2022 has started!";
-                            }
-                            return;
+                            distance = hackathon_end - now;
                         }
 
                         let days = Math.floor(distance / day).toString().padStart(2, '0');
@@ -310,10 +316,16 @@
             </div>        
             <div id="sponsors" class="section">
                 <h1>&lt; sponsors &gt;</h1>
-                <div class="img-grid">
-                    <img src="assets/sponsor_img/fake_company.png">
-                    <img src="assets/sponsor_img/fake_company_2.svg">
-                    <img src="assets/sponsor_img/fake_company_3.png">
+                <div class="sponsor-grid">
+                    <a href="https://1435capital.com/" target="_blank"><img src="assets/sponsor_img/1435_capital.png" style="width:70%"></a>
+                    <a href="http://www.echo3d.co/" target="_blank"><img src="assets/sponsor_img/echo3d.png"></a>
+                    <a href="https://www.axure.com" target="_blank"><img src="assets/sponsor_img/axure.svg"></a>
+                    <a href="https://interviewbuddy.in" target="_blank"><img src="assets/sponsor_img/interview_buddy.png"></a>
+                    <a href="https://www.taskade.com/" target="_blank"><img src="assets/sponsor_img/taskade.png"></a>
+                    <a href="https://www.centered.app/" target="_blank"><img src="assets/sponsor_img/centered.svg"></a>
+                    <a href="https://certopus.com/" target="_blank"><img src="assets/sponsor_img/certopus.svg"></a>
+                    <a href="https://www.voiceflow.com/" target="_blank"><img src="assets/sponsor_img/voiceflow.png"></a>
+                    <a href="https://www.think-board.com/" target="_blank"><img src="assets/sponsor_img/think_board.png" style="width:80%"></a>
                 </div>
             </div>            
         </div>

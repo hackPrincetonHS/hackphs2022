@@ -231,6 +231,37 @@ td, th {
     transition: max-height 0.2s ease-out;
 }
 
+/* SPONSORS */
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    text-align: center;
+}
+
+.sponsor-grid a {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.sponsor-grid img {
+    width: 100%;
+    margin: 10px;
+    margin-bottom: 50px;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    bottom: 0px;
+}
+
+.sponsor-grid img:hover {
+    filter: drop-shadow(0px 0px 20px rgba(94, 94, 94, 0.5));
+    bottom: 5px;
+}
+
 /* TEAM */
 .img-grid {
     display: grid;

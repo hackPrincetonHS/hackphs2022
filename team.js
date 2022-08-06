@@ -38,12 +38,7 @@ let team = [
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
             },
             {
-                name: "Placeholder",
-                img: "placeholder.jpg",
-                bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
-            },
-            {
-                name: "Placeholder",
+                name: "Allen Gu",
                 img: "placeholder.jpg",
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
             },
@@ -53,12 +48,12 @@ let team = [
         section: "Outreach",
         members: [
             {
-                name: "Placeholder",
+                name: "Ishaan Banerjee",
                 img: "placeholder.jpg",
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
             },
             {
-                name: "Placeholder",
+                name: "Rachel Guhathakurta",
                 img: "placeholder.jpg",
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
             },
@@ -78,12 +73,17 @@ let team = [
         section: "Logistics",
         members: [
             {
-                name: "Placeholder",
+                name: "Arunima Suri",
                 img: "placeholder.jpg",
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
             },
             {
-                name: "Placeholder",
+                name: "Amanda Sun",
+                img: "placeholder.jpg",
+                bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
+            },
+            {
+                name: "Shrey Khetan",
                 img: "placeholder.jpg",
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
             },
