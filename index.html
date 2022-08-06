@@ -27,11 +27,12 @@
         <title>hackPHS 2022</title>
     </head>
     <body>
+        <a id="top"></a>
         <!-- NAVBARS -->
         <nav id="desktop_nav">
             <ul>
                 <li><img src="assets/logo.svg"></li>
-                <li><a>HACKPHS</a></li>
+                <li><a href="#top">HACKPHS</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#schedule">Schedule</a></li>
@@ -46,6 +47,7 @@
                         <a href="https://2018.hackphs.tech">2018</a>
                     </div>
                 </li>
+                <button id="register-button-nav" onclick='location.href="https:\/\/clipboard.hackphs.tech/"'>REGISTER <i class="fa fa-arrow-right"></i></button>
             </ul>
         </nav>
 
@@ -79,65 +81,16 @@
         <div id="splash">
             <div id="splash-box">
                 <div style="text-align:center;padding-bottom:50px;">
-                    <img src="img/tmp_logo.png" alt="HackPHS 2022" style="width:80%;filter:drop-shadow(0px 0px 30px white)">
+                    <img id="splash-logo" src="img/tmp_logo.png" alt="HackPHS 2022">
                     <h2 style="color: rgb(234, 0, 109)">NOVEMBER 5th-6th</h1>
-                    <button>REGISTER <i class="fa fa-arrow-right"></i></button>
+                    <button id="register-button" onclick='location.href="https:\/\/clipboard.hackphs.tech/"'>REGISTER <i class="fa fa-arrow-right"></i></button>
                 </div>
                 <div id="countdown" style="position:relative;min-height:400px">
                     <div id=countdown-rock>
                         <img src="img/timer_rock.png" style="width:100%">
                         <svg id="countdown-timer" viewBox="0 0 105 100" style="width:100%"></svg>
                     </div>
-                </div>
-                <script>
-                    let end = new Date('11/5/2022 12:00 AM');
-                    let hackathon_end = new Date('11/6/2022 6:00 PM');
-
-                    // how many ms each unit is
-                    let second = 1000;
-                    let minute = second * 60;
-                    let hour = minute * 60;
-                    let day = hour * 24;
-
-                    let timer;
-
-                    function showRemaining() {
-                        let now = new Date();
-                        let distance = end - now;
-
-                        if (distance < 0) {
-                            if (now > hackathon_end) {
-                                document.getElementById('countdown-timer').innerHTML = "hackPHS 2022 is over!";
-                                return;
-                            }
-                            distance = hackathon_end - now;
-                        }
-
-                        let days = Math.floor(distance / day).toString().padStart(2, '0');
-                        let hours = Math.floor((distance % day) / hour).toString().padStart(2, '0');
-                        let minutes = Math.floor((distance % hour) / minute).toString().padStart(2, '0');
-                        let seconds = Math.floor((distance % minute) / second).toString().padStart(2, '0');
-
-                        document.getElementById('countdown-timer').innerHTML = `
-                            <text x="30" y="70">${days}</text>
-                            <text x="49" y="70">${hours}</text>
-                            <text x="70" y="70">${minutes}</text>
-                            <text x="90" y="70">${seconds}</text>
-
-                            <text x="45" y="70">:</text>
-                            <text x="65" y="70">:</text>
-                            <text x="86" y="70">:</text>
-
-                            <text x="28" y="80" style="font-size:5pt">DAYS</text>
-                            <text x="53" y="80" style="font-size:5pt">HR</text>
-                            <text x="73" y="80" style="font-size:5pt">MIN</text>
-                            <text x="92" y="80" style="font-size:5pt">SEC</text>
-                        `;
-                    }
-
-                    setInterval(showRemaining, 1000);
-                    showRemaining();
-                </script>    
+                </div> 
             </div>
             <br><br><br>
         </div>
@@ -164,7 +117,7 @@
                 </p>    
                 <h2>Who pays for all of this?</h2>
                 <p>
-                    hackPHS is completely free to everyone, thanks to our amazing sponsors!
+                    hackPHS is completely free to everyone, thanks to our amazing <a href=#sponsors style="color:white">sponsors!</a>
                 </p>
                 <h2>What is a hackathon?</h2>
                 <p>
@@ -197,21 +150,6 @@
                         <p>Teams of up to 4 people are encouraged (though not mandatory). If you don't have a team before the event, don't worry! At the beginning of the event, there will be a team building workshop, which will be a great way to meet other enthusiastic people and even make new friends.</p>
                     </div>
                 </div>
-                <script>
-                    let toggles = document.getElementsByClassName("accordion-button");
-                    for (let toggle of toggles) {
-                        toggle.addEventListener("click", function(e) {
-                            this.classList.toggle("active");
-                            let panel = this.nextElementSibling;
-                            if (panel.style.maxHeight) {
-                                panel.style.maxHeight = null;
-                            }
-                            else {
-                                panel.style.maxHeight = panel.scrollHeight + "px";
-                            } 
-                        });
-                    }
-                </script>
                 <br><br><br><br>
             </div>            
         </div>
@@ -360,5 +298,7 @@
             </div>
         </div>
         <script src="team.js"></script>
+        <script src="accordion.js"></script>
+        <script src="countdown.js"></script>
     </body>
 </html>
