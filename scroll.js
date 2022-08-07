@@ -1,15 +1,10 @@
-function calcScrollParameters(elem, scrolled) {
-    /* This kinda works, somehow */
+function calcScrollParameters(elem) {
     let rect = elem.getBoundingClientRect();
     let start = rect.top;
-    let end = rect.top + window.innerHeight;
-    return (end - start) / 100 * scrolled - start;
+    return start * (window.innerWidth / window.innerHeight);
 }
 
 window.addEventListener("scroll", function() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("scroll-fish").style.transform = `translateX(${100 - calcScrollParameters(document.getElementById("scroll-fish"), scrolled)}%)`;
-    document.getElementById("scroll-jellyfish").style.transform = `translateX(${calcScrollParameters(document.getElementById("scroll-jellyfish"), scrolled)}%)`;
+    document.getElementById("scroll-fish").style.left = `${calcScrollParameters(document.getElementById("scroll-fish"))}px`;
+    document.getElementById("scroll-jellyfish").style.right = `${calcScrollParameters(document.getElementById("scroll-jellyfish"))}px`;
 });

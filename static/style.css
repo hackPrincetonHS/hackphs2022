@@ -183,10 +183,16 @@ td, th {
     z-index: 100;
     top: 0px;
     transform: translate(0%, -50%);
+    width: 100%;
 }
 
-.trans-scroll-container {
-    position: relative;
+.trans-scroll-container{
+    width: 100%;
+}
+
+.trans-scroll-container img{
+    position: absolute;
+    transform: translateY(-50%);
 }
 
 @keyframes waves {
@@ -252,9 +258,10 @@ td, th {
     padding: 0px 10px;
     font-size: 15pt;
     background-color: rgba(3, 53, 106, 0.482);
-    max-height: 0;
+    max-height: 0px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    margin: 0px;
 }
 
 /* SPONSORS */
@@ -427,6 +434,7 @@ nav > ul > li > a, nav #dropdown {
     box-sizing: border-box;
     transition: background-color 0.1s;
     background-color: transparent;
+    margin: 0px;
 }
   
 nav > ul > li > a:hover, nav #dropdown:hover {
