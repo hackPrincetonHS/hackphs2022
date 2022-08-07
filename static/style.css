@@ -6,6 +6,7 @@ html, body {
     image-rendering: smooth;
     scroll-behavior: smooth;
     position: relative;
+    width: 100%;
 }
 
 html {
@@ -91,9 +92,9 @@ button:hover {
 
 h1 {
     font-size: 60pt;
-    letter-spacing: 2pt;
     z-index: 1000;
     position: relative;
+    font-weight: 400;
 }
 
 @media screen and (max-width: 800px) {
@@ -105,6 +106,7 @@ h1 {
 h2 {
     font-size: 30pt;
     position: relative;
+    font-weight: 400;
 }
 
 table {
@@ -185,6 +187,10 @@ td, th {
     z-index: 100;
     top: 0px;
     transform: translate(0%, -50%);
+}
+
+.trans-scroll-container {
+    position: relative;
 }
 
 @keyframes waves {
@@ -430,6 +436,7 @@ nav #dropdown #dropdown-content {
     position: absolute;
     width: 100%;
     background-color: rgba(11, 72, 122, 0.87);
+    backdrop-filter: blur(3px);
     top: 100%;
     left: 0px;
     border-bottom-left-radius: 5px;
@@ -470,6 +477,10 @@ nav #dropdown:hover #dropdown-content {
     background-color: rgba(17, 82, 136, 0.831);
     display: none;
     transition: 0.2s opacity;
+    position: absolute;
+    top: 64.8px;
+    width: 100%;
+    backdrop-filter: blur(3px);
 }
 
 #mobile_menu li {
