@@ -114,14 +114,11 @@ table {
     table-layout: fixed;
     border-radius: 10px;
     box-shadow: 0 0 0 2px white;
+    overflow: hidden;
 }
 
 thead {
     background-color: rgba(12, 71, 143, 0.53);
-}
-
-th {
-    border-radius: 10px;
 }
 
 td, th {
@@ -414,8 +411,13 @@ nav li {
 nav img {
     height: 50px;
     padding: 5px 10px;
+    transition: transform 0.2s;
 }
   
+nav img:hover {
+    transform: rotateZ(-20deg);
+}
+
 nav > ul > li > a, nav #dropdown {
     color: white;
     text-align: center;
