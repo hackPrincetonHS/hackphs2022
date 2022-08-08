@@ -229,6 +229,7 @@ td, th {
     letter-spacing: normal;
     text-align: left;
     padding: 10px;
+    margin: 0px;
 }
 
 .accordion button:not(:first-child) {
@@ -268,8 +269,9 @@ td, th {
 .sponsor-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px;
+    grid-gap: 5%;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .sponsor-grid a {
@@ -281,8 +283,6 @@ td, th {
 
 .sponsor-grid img {
     width: 100%;
-    margin: 10px;
-    margin-bottom: 50px;
     object-fit: contain;
     cursor: pointer;
     transition: all 0.3s;
@@ -339,12 +339,12 @@ td, th {
 #team-carousel-container .button-container {
     width: 10%;
     box-sizing: border-box;
-    float: left;
     display: flex;
 }
 
 #team-carousel-container button {
     margin: auto;
+    padding: 0px;
     display: inline-block;
     background-color: transparent;
     transition: color 0.1s;
