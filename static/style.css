@@ -16,7 +16,7 @@ html, body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 30px;
     margin-left: 10%;
-    margin-right: 10%;
+    margin-right: 5%;
     position: relative;
     margin-top: 100px;
 }
@@ -173,6 +173,7 @@ a:hover {
 
 #sponsors {
     background-image: url("../img/bg_sponsors.png");
+    color: white;
 }
 
 #team {
@@ -193,9 +194,9 @@ a:hover {
     position: absolute;
     bottom:0;
     right:0;
-    transform:skew(-10deg);
-    font-size: 9pt;
-    fill: rgb(85, 71, 33);
+    transform:skew(-5deg);
+    font-size: 8pt;
+    fill: rgb(16, 16, 16);
 }
 
 /* FOREGROUND */
@@ -205,15 +206,22 @@ a:hover {
     top: 0px;
     transform: translate(0%, -50%);
     width: 100%;
+    background-color: transparent;
+}
+
+.trans img {
+    background-color: transparent;
 }
 
 .trans-scroll-container{
     width: 100%;
+    background-color: transparent;
 }
 
 .trans-scroll-container img{
     position: absolute;
     transform: translateY(-50%);
+    background-color: transparent;
 }
 
 @keyframes waves {

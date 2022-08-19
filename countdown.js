@@ -27,19 +27,19 @@ function showRemaining() {
     let seconds = Math.floor((distance % minute) / second).toString().padStart(2, '0');
 
     document.getElementById('countdown-timer').innerHTML = `
-        <text x="30" y="70">${days}</text>
-        <text x="49" y="70">${hours}</text>
-        <text x="70" y="70">${minutes}</text>
-        <text x="90" y="70">${seconds}</text>
+        <text x="22" y="70">${days}</text>
+        <text x="41" y="70">${hours}</text>
+        <text x="62" y="70">${minutes}</text>
+        <text x="82" y="70">${seconds}</text>
 
-        <text x="45" y="70">:</text>
-        <text x="65" y="70">:</text>
-        <text x="86" y="70">:</text>
+        <text x="37" y="70">:</text>
+        <text x="57" y="70">:</text>
+        <text x="78" y="70">:</text>
 
-        <text x="28" y="80" style="font-size:5pt">DAYS</text>
-        <text x="53" y="80" style="font-size:5pt">HR</text>
-        <text x="73" y="80" style="font-size:5pt">MIN</text>
-        <text x="92" y="80" style="font-size:5pt">SEC</text>
+        <text x="20" y="80" style="font-size:5pt">DAYS</text>
+        <text x="45" y="80" style="font-size:5pt">HR</text>
+        <text x="65" y="80" style="font-size:5pt">MIN</text>
+        <text x="84" y="80" style="font-size:5pt">SEC</text>
     `;
 }
 
