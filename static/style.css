@@ -46,9 +46,9 @@ button:hover {
 
 #register-button {
     outline: none;
-    -webkit-transition: ease-out 0.5s;
-    -moz-transition: ease-out 0.5s;
-    transition: 0.5s;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: 0.3s;
 }
 
 #register-button:hover {
