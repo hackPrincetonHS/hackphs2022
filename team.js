@@ -169,6 +169,13 @@ let team = [
     },
 ];
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 let elem = document.getElementById("team-container");
 let titleElem = document.getElementById("team-section-name");
 
@@ -179,6 +186,7 @@ function createTeamSection(sectionIndex) {
     titleElem.innerHTML = `<h2>${section.section}</h2>`;
     let res = '';
     res += `<div class="img-grid">`;
+    shuffleArray(section.members);
     for (let member of section.members) {
         res += `
         <div onclick="document.getElementById('${member.name}').showModal()">
