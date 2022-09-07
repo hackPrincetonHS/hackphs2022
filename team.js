@@ -132,7 +132,7 @@ let team = [
         members: [
             {
                 name: "Arunima Suri",
-                img: "arunima.jpg",
+                img: "arunima.jpeg",
                 bio: `Hey! I’m Arunima (my friends call me Nima), and I am a senior at PHS. This is my second
                 year being a director for hackPHS: this year I am director of logistics and last year I was director of
                 design and tech. Outside of school, I enjoy baking, volunteering, playing golf, traveling, and
