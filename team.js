@@ -37,6 +37,11 @@ let team = [
                 movies (especially terrible ones I can poke fun at), listen to music, and travel (although that had to
                 stop for a bit). I hope you all enjoy this year’s hackathon!`
             },
+            {
+                name: "Davita Wrone",
+                img: "davita.JPG",
+                bio: `Hi I’m Davita and I’m a senior at PHS. This is my first year being an organizer for hack PHS and I’m on the design/tech team. Aside from coding, I love listening to music, reading, and going on adventures with friends. Biology and English are my favorite subjects in school and I’m on the PHS debate team (don’t ask me about it if you don’t want to hear me talk for 20 minutes straight, though :)) I have loved attending the hackathon in previous years so I’m super excited to be on the logistical end this year!`
+            }
         ]
     },
     {
@@ -159,12 +164,11 @@ let team = [
                 my free time, I like playing the clarinet and playing games with my friends. I hope you enjoy your
                 hackathon this year!`
             },
-            /* NOTE: Brian's is missing, and I don't have a image or bio
             {
                 name: "Brian Jiang",
-                img: "placeholder.jpg",
-                bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec nibh sed leo rhoncus placerat rutrum a ex. Duis vestibulum dapibus sapien quis cursus. Mauris accumsan, risus sed varius ornare, orci tellus auctor nunc, vitae ultrices sem elit nec mauris. Cras bibendum nibh nibh, non luctus libero luctus id. Etiam gravida quam leo, feugiat condimentum orci facilisis ut. Praesent volutpat tellus in nibh suscipit, at finibus dui viverra. Maecenas posuere ullamcorper sem, nec vehicula quam vestibulum nec."
-            },*/
+                img: "brian.jpg",
+                bio: `Hi! My name is Brian, and I'm currently a junior. This is my first year on the logistics team. Aside from hackPHS, I'm a part of the Computer and Robotics Club and an Ideas Center tutor. Outside of school, I love to hang out with friends and play video games. I'm excited to meet you all in November!`
+            },
         ]
     },
 ];
