@@ -1,5 +1,5 @@
-let end = new Date('11/5/2022 12:00 AM');
-let hackathon_end = new Date('11/6/2022 6:00 PM');
+let end = new Date('11/5/2022 10:30 AM');
+let hackathon_end = new Date('11/6/2022 10:00 AM');
 
 // how many ms each unit is
 let second = 1000;

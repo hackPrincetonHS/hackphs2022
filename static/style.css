@@ -10,6 +10,10 @@ html, body {
     overflow-x: hidden;
 }
 
+h1, h2, h3, p, table {
+    position: relative;
+}
+
 /* SPLASH */
 #splash-box {
     display: grid;
@@ -620,5 +624,5 @@ nav #dropdown:hover #dropdown-content {
     top:65px;
     width:10%;
     z-index:10000;
-    animation: slideDown 0.5s ease-out;
+    animation: slideDown 1s;
 }
