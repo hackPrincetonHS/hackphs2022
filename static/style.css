@@ -66,14 +66,42 @@ button:hover {
     left: 5px;
 }
 
+@keyframes slide {
+    0% {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotate(-10deg);
+        opacity: 1;
+    }
+}
+
 #splash-logo {
     width: 80%;
     filter: drop-shadow(0px 0px 30px white);
     transition: filter 0.2s;
+    animation: slide 1s;
+    transform: rotate(-10deg);
 }
 
 #splash-logo:hover {
     filter: drop-shadow(0px 0px 50px rgb(0, 200, 255));
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#splash-bottom {
+    animation: slideUp 1s;
 }
 
 /* SECTIONS */
@@ -436,6 +464,7 @@ nav ul {
     padding: 0;
     background-color: rgb(8, 66, 113);
     font-size: 15pt;
+    box-shadow: 0px 0px 20px rgba(9, 84, 148, 0.566);
 }
   
 nav li {
@@ -570,4 +599,26 @@ nav #dropdown:hover #dropdown-content {
 
 #register-button-nav:hover i {
     left: 5px;
+}
+
+/* Badge */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#mlh-trust-badge {
+    display:block;
+    max-width:100px;
+    min-width:60px;
+    position:fixed;
+    right:50px;
+    top:65px;
+    width:10%;
+    z-index:10000;
+    animation: slideDown 0.5s ease-out;
 }
